@@ -21,16 +21,33 @@ if openai_api_key is None:
 # Initializing the LLM with OpenAI
 llm = OpenAI(api_key=openai_api_key)
 
-# Function to extract text from PDF
 def extract_text_from_pdf(file_path):
+    """
+    Extracts text from a PDF file.
+
+    Args:
+        file_path (str): Path to the PDF file.
+
+    Returns:
+        str: Extracted text from the PDF.
+    """
     doc = fitz.open(file_path)
     text = ""
     for page in doc:
         text += page.get_text()
     return text
 
-# Function to answer queries from documents
 def answer_query(query, document_text):
+    """
+    Answers a query based on the content of a document.
+
+    Args:
+        query (str): The query to be answered.
+        document_text (str): The text extracted from the document.
+
+    Returns:
+        str: The answer to the query.
+    """
     # Splitting the document into manageable chunks
     text_splitter = CharacterTextSplitter(chunk_size=2000, chunk_overlap=100)
     chunks = text_splitter.split_text(document_text)
@@ -55,8 +72,13 @@ def answer_query(query, document_text):
     
     return answer
 
-# Function to collect user information
 def collect_user_info():
+    """
+    Collects user information through a form.
+
+    Returns:
+        tuple: A tuple containing the name, phone number, and email of the user.
+    """
     with st.form(key='user_info_form'):
         name = st.text_input("Name")
         phone = st.text_input("Phone Number")
@@ -66,8 +88,10 @@ def collect_user_info():
             return name, phone, email
     return None, None, None
 
-# Streamlit app
 def main():
+    """
+    Main function to run the Streamlit app for document query and user info collection.
+    """
     st.title("Chatbot with Document Query and User Info Collection")
 
     # File uploader for PDF
