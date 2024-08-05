@@ -86,9 +86,11 @@ Alternative Approaches
     * Pre-built Models: Use hosted APIs for models like OpenAI’s GPT-3 or GPT-4, which offload the computational burden to their infrastructure.
 3. Model Parallelism:
     * Sharding: For very large models, distribute the model across multiple GPUs or machines to handle larger models that exceed the memory capacity of a single device.
-Testing Resource Requirements
-Before deploying the full model, you can start by testing with smaller models or subsets of data to gauge the resource requirements and ensure your environment is appropriately configured.
-By ensuring you meet these resource requirements, you can effectively run large models like GPT-J and avoid performance bottlenecks.
+
+## Stability and Performance
+- **OpenAI GPT**: Most stable and reliable for generating accurate responses.
+- **GPT-J**: Requires significant computational resources but performs well for generating responses.
+- **LLaMA**: Suitable for extracting text but may struggle with accurately responding to queries.
 
   
 ## Libraries Used
@@ -149,14 +151,14 @@ For further questions or support, contact:
 
 ## Acknowledgements
 This project leverages the following open-source libraries and tools:
-OpenAI: https://openai.com/
-GPT-J: https://huggingface.co/EleutherAI/gpt-j-6B
-Transformers: https://huggingface.co/transformers/
-Sentence Transformers: https://www.sbert.net/docs/
-FAISS: https://faiss.ai/
-LangChain: https://langchain.com/
-PyMuPDF: https://pymupdf.readthedocs.io/en/latest/
-Streamlit: https://streamlit.io/
+- [OpenAI](https://openai.com/)
+- [GPT-J](https://huggingface.co/EleutherAI/gpt-j-6B)
+- [Transformers](https://huggingface.co/transformers/)
+- [Sentence Transformers](https://www.sbert.net/docs/)
+- [FAISS](https://faiss.ai/)
+- [LangChain](https://langchain.com/)
+- [PyMuPDF](https://pymupdf.readthedocs.io/en/latest/)
+- [Streamlit](https://streamlit.io/)
 
 ## Changelog
 - **v1.0.0**: Initial release with basic features for document query processing and user information collection.
