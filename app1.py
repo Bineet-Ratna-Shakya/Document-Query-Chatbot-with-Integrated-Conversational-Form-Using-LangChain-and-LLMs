@@ -8,8 +8,8 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from dotenv import load_dotenv
 
 # Load environment variables from the specified .env file
-env_path = '/Users/soul/Documents/chatbot-project/openai.env'
-load_dotenv(dotenv_path=env_path)
+#env_path = '/Users/soul/Documents/chatbot-project/openai.env'
+#load_dotenv(dotenv_path=env_path)
 
 # Load the GPT-J model and tokenizer
 model_name = "EleutherAI/gpt-j-6B"
