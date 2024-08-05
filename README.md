@@ -12,7 +12,7 @@ This chatbot is designed to answer user queries from various documents and inclu
 
 
 ### Prerequisites
-- Python 3.x
+- Python 3.11.4
 - Required libraries (specified in `requirements.txt`)
 
 Warning
