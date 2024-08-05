@@ -31,6 +31,50 @@ This project was developed on macOS. Please ensure compatibility with your opera
     ```sh
     pip install -r requirements.txt
     ```
+    
+### Creating a Virtual Environment
+
+If you don't have a virtual environment set up, follow these steps to create one:
+
+1. **Install `virtualenv` (if not already installed):**
+   ```bash
+   pip install virtualenv
+   
+2. **Activate the virtual environment:**
+
+    - **On Windows:**
+
+        ```bash
+        .\venv\Scripts\activate
+        ```
+
+    - **On macOS/Linux:**
+
+        ```bash
+        source venv/bin/activate
+        ```
+
+## Installing the Required Libraries
+
+Once the virtual environment is activated, install the necessary libraries:
+
+```bash
+pip install torch transformers sentence-transformers faiss-cpu streamlit
+```
+Note: If you are using a GPU, ensure you install the GPU-compatible versions of the libraries.
+
+## Additional Setup
+
+### CUDA and cuDNN
+To leverage GPU acceleration, ensure CUDA and cuDNN are installed and configured correctly. Follow the official installation guides for your specific GPU and operating system.
+
+### Verifying the Setup
+You can verify your setup by running a small script to check if the libraries are installed correctly and the GPU is being utilized.
+
+```python
+import torch
+print(torch.cuda.is_available())
+```
 
 ### Configuration Instructions
 1. **API Keys and Environment Variables**:
