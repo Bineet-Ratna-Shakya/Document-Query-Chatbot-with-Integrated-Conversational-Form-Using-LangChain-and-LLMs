@@ -52,6 +52,18 @@ This chatbot is designed to answer user queries from various documents and inclu
 3. **Triggering the conversational form**:
     - The chatbot will automatically prompt for user information when required.
 
+### Example Usage
+1. **Querying Documents**:
+    - User: "Can you summarize the main points of this document?"
+    - Chatbot: "Sure, here are the main points: [summary based on document content]"
+2. **Providing User Information**: (future development).
+    - User: "I'd like to provide my contact information."
+    - Chatbot: "Please provide your name, phone number, and email address."
+
+### Supported Document Formats
+- PDF
+
+  
 ## API Integration
 
 ### Setting Up and Configuring APIs
