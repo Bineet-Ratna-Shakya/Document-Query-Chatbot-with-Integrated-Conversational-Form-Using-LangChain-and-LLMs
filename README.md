@@ -83,6 +83,8 @@ print(torch.cuda.is_available())
      LLAMA_API_KEY=your_llama_api_key
      OPENAI_API_KEY=your_openai_api_key
      ```
+Warning: Make sure to update the file path directory in the script to correctly reference the .env file location. Failure to do so may result in your application not finding the API keys, leading to errors in the integration.
+
 
 ## Usage
 
