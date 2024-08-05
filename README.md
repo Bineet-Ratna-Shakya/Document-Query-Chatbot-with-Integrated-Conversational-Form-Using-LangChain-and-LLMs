@@ -15,6 +15,9 @@ This chatbot is designed to answer user queries from various documents and inclu
 - Python 3.x
 - Required libraries (specified in `requirements.txt`)
 
+Warning
+This project was developed on macOS. Please ensure compatibility with your operating system. Make sure to install Python 3.11.4 and all required libraries.
+
 ### Steps to Set Up the Project
 1. **Clone the repository**:
     ```sh
@@ -75,29 +78,33 @@ This chatbot is designed to answer user queries from various documents and inclu
    - Visit the [OpenAI API documentation](https://platform.openai.com/docs/api-reference/introduction) for configuration details.
 
 
-Running a large model like GPT-J (6 billion parameters) requires significant computational resources. Here’s a general overview of the resources needed:
-1. Memory (RAM)
-* GPU Memory (VRAM): At least 16 GB of GPU memory is recommended. GPT-J can be run on GPUs with less VRAM, but performance will be slower, and you might need to use techniques like model parallelism or offloading to CPU, which can reduce efficiency.
-* System RAM: At least 32 GB of system RAM is recommended. Large models and their associated data (like embeddings and intermediate computations) can consume substantial system memory.
-2. Computational Power
-* GPU: A high-performance GPU such as NVIDIA RTX 3090, A100, or V100 is ideal. The GPU should have sufficient memory to handle the model’s parameters and intermediate computations.
-* CPU: A multi-core CPU can also help, especially for preprocessing and managing data. Modern processors with multiple cores (e.g., Intel i7/i9, AMD Ryzen 7/9) are recommended.
-3. Storage
-* Disk Space: Ensure you have sufficient disk space for storing the model weights and any temporary data generated during computation. For GPT-J, the model weights alone are around 25 GB. Ensure you have at least 50-100 GB of free space to accommodate the model and related files.
-4. Network Bandwidth
-* Internet Connection: Downloading the model and dependencies requires a good internet connection. A stable connection with sufficient bandwidth is necessary to handle large files efficiently.
-5. Software Requirements
-* CUDA: For GPU acceleration, CUDA and cuDNN must be installed. Compatibility depends on the GPU and the version of PyTorch used.
-* Libraries: Make sure to install compatible versions of libraries like PyTorch, Transformers, Sentence Transformers, FAISS, and Streamlit.
-Alternative Approaches
-1. Model Optimization:
-    * Distillation: Use a smaller, distilled version of the model if possible. Distilled models are lighter and faster while maintaining reasonable performance.
-    * Quantization: This technique reduces the precision of the model weights to decrease memory usage and speed up inference.
-2. Cloud Solutions:
-    * Managed Services: Consider using cloud-based machine learning services (like AWS Sagemaker, Google AI Platform, or Azure Machine Learning) that provide powerful GPUs and manage the infrastructure for you.
-    * Pre-built Models: Use hosted APIs for models like OpenAI’s GPT-3 or GPT-4, which offload the computational burden to their infrastructure.
-3. Model Parallelism:
-    * Sharding: For very large models, distribute the model across multiple GPUs or machines to handle larger models that exceed the memory capacity of a single device.
+# Resources Needed for Running GPT-J (6 Billion Parameters)
+
+Running a large model like GPT-J (6 billion parameters) requires significant computational resources. Below is a general overview of the necessary resources.
+
+## Memory (RAM)
+- **GPU Memory (VRAM):** At least 16 GB of GPU memory is recommended.
+- **System RAM:** At least 32 GB of system RAM is recommended.
+
+## Computational Power
+- **GPU:** A high-performance GPU such as NVIDIA RTX 3090, A100, or V100 is ideal.
+- **CPU:** Modern processors with multiple cores (e.g., Intel i7/i9, AMD Ryzen 7/9) are recommended.
+
+## Storage
+- **Disk Space:** At least 50-100 GB of free space.
+
+## Network Bandwidth
+- **Internet Connection:** A stable connection with sufficient bandwidth is necessary.
+
+## Software Requirements
+- **CUDA:** For GPU acceleration, CUDA and cuDNN must be installed.
+- **Libraries:** Install compatible versions of the following libraries:
+  - PyTorch
+  - Transformers
+  - Sentence Transformers
+  - FAISS
+  - Streamlit
+
 
 ## Stability and Performance
 - **OpenAI GPT**: Most stable and reliable for generating accurate responses.
